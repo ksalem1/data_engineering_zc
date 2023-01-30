@@ -1,3 +1,0 @@
-Week 1 Assignment
-
-Ingesting data into Postgres database instance using python data pipeline that is built inside a docker container alongside pgadmin within the same network
