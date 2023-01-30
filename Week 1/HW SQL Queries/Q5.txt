@@ -1,0 +1,5 @@
+SELECT CAST(lpep_pickup_datetime AS DATE) "Day",sum(CASE WHEN passenger_count = 2 THEN 1 ELSE 0 END) AS two_passengers_count,
+SUM(CASE WHEN passenger_count = 3 THEN 1 ELSE 0 END) AS three_passengers_count
+FROM green_taxi_trips
+WHERE CAST(lpep_pickup_datetime AS DATE) = '2019-01-01'
+group by CAST(lpep_pickup_datetime AS DATE)

@@ -1,0 +1,3 @@
+SELECT CAST(lpep_pickup_datetime AS DATE) "Day",COUNT(1) FROM green_taxi_trips
+WHERE CAST(lpep_pickup_datetime AS DATE) = '2019-01-15'
+GROUP BY 1

@@ -1,0 +1,3 @@
+SELECT zt.Zone,MAX(gt.tip) FROM green_taxi_trips AS gt
+JOIN zone_table AS zt ON gt.PULocationID = zt.LocationID
+where zt.Zone = "Astoria"
