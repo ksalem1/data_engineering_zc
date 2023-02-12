@@ -1,0 +1,53 @@
+###
+### A complete description of a Prefect Deployment for flow 'Upload from Cloud Storage to BigQuery table'
+###
+name: GreenTaxi GCS to BQ
+description: null
+version: 973e8d4bce35ee29a793d7e15cb0ec72
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+tags: []
+parameters: {"color":"green","months":[1],"year":2020}
+schedule: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: Upload from Cloud Storage to BigQuery table
+manifest_path: null
+storage: null
+path: D:\DEZC\Week2\Week2Assignment
+entrypoint: el_gcs_to_bq.py:load_to_bigquery
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    color:
+      title: color
+      position: 0
+      type: string
+    year:
+      title: year
+      position: 1
+      type: integer
+    months:
+      title: months
+      position: 2
+      type: array
+      items: {}
+  required:
+  - color
+  - year
+  - months
+  definitions: null

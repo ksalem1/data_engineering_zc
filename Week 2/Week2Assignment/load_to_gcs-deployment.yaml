@@ -1,0 +1,52 @@
+###
+### A complete description of a Prefect Deployment for flow 'Save from web to Cloud Storage'
+###
+name: Parameterized Web to GCS
+description: null
+version: ab946c0fb25b8f5b8145a4adad90b617
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+tags: []
+parameters: {"color":"yellow","year":2019,"month":1}
+schedule: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: Save from web to Cloud Storage
+manifest_path: null
+storage: null
+path: D:\DEZC\Week2\Week2Assignment
+entrypoint: etl_web_to_gcs.py:load_to_gcs
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    color:
+      title: color
+      position: 0
+      type: string
+    year:
+      title: year
+      position: 1
+      type: integer
+    month:
+      title: month
+      position: 2
+      type: integer
+  required:
+  - color
+  - year
+  - month
+  definitions: null
